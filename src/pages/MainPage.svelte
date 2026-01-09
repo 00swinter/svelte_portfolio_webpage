@@ -7,6 +7,7 @@
 
 <div class= "page">
     <ProjectButtonPaginator>
+        <ProjectButton src="cyberpunk.jpg" title="Cyberpunk" />
         <ProjectButton src="blackhole.jpg" title="Backhole" />
         <ProjectButton src="outhold.jpg" title="Outhold" />
         <ProjectButton src="routine.jpg" title="Routine" />

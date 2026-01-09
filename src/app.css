@@ -1,5 +1,7 @@
 :root {
-  font-family: system-ui, Helvetica, Arial, sans-serif; 
+  font-family: system-ui, Helvetica, Arial, sans-serif;
+  color: white
+  
 }
 *{
   border: 1px solid red;
