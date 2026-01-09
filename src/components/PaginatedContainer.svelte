@@ -61,7 +61,7 @@
     .paginator-frame {
         position: relative;
         width: 100%;
-        max-width: 800px; /* Adjust as needed */
+        max-width: 1600px; /* Adjust as needed */
         margin: auto;
         display: flex;
         align-items: center;

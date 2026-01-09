@@ -8,19 +8,14 @@
 
 <PaginatedContainer>
     <div class="page-grid">
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
+        <ProjectButton src="blackhole.jpg" title="Backhole" />
+        <ProjectButton src="outhold.jpg" title="Outhold" />
+        <ProjectButton src="routine.jpg" title="Routine" />
     </div>
     <div class="page-grid">
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
-    </div>
-    <div class="page-grid">
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
-        <ProjectButton src="cyberpunk.jpg" title="CYBERPUNK" />
+        <ProjectButton src="blackhole.jpg" title="Backhole" />
+        <ProjectButton src="outhold.jpg" title="Outhold" />
+        <ProjectButton src="routine.jpg" title="Routine" />
     </div>
 </PaginatedContainer>
 

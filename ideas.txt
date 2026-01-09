@@ -1,0 +1,18 @@
+projects:
+factorio mod
+drones
+bezier stuff
+snake analyser
+ai gym
+games
+website mobee
+blender
+particles in workgraph
+
+
+future:
+korrelation and or convolution visualiser
+ai gym in browser
+web raytracer
+fractals
+ast parser
