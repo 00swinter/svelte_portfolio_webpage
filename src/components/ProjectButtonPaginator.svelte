@@ -21,6 +21,10 @@
 
     // 2. Calculate centering offset whenever page or dimensions change
     $effect(() => {
+        updatePosition();
+    });
+
+    function updatePosition(){
         // Dependencies: run this when currentPage, viewport, or track changes
         if (viewport && track && track.children[currentPage]) {
             const activeChild = track.children[currentPage];
@@ -36,7 +40,7 @@
 
             translateX = centerPosition;
         }
-    });
+    }
 
     function nextPage() {
         if (currentPage < totalPages - 1) currentPage++;
@@ -49,7 +53,26 @@
     function goToPage(index) {
         currentPage = index;
     }
+
+    function handleTrackClick(event) {
+        // 1. Find the direct child of 'track' that was clicked
+        // We use .closest() in case the user clicked an image/text INSIDE the child
+        const clickedChild = event.target.closest('.track > *');
+
+        if (clickedChild && track) {
+            // 2. Find the index of that child
+            const childrenArray = Array.from(track.children);
+            const index = childrenArray.indexOf(clickedChild);
+
+            // 3. Update the page if valid
+            if (index !== -1) {
+                goToPage(index);
+            }
+        }
+    }
 </script>
+
+<svelte:window onresize={updatePosition} />
 
 <div class="main">
     <div class="indicators">
@@ -76,6 +99,7 @@
             class="track"
             bind:this={track}
             style="transform: translateX({translateX}px)"
+            onclick={handleTrackClick}
         >
             {@render children()}
         </div>
@@ -100,16 +124,13 @@
         overflow: hidden; /* Ensures buttons stick to sides if parent is small */
         transition: all 0.3s ease-out;
     }
-    
-    @media (max-width: 768px) {
-       
-    }
 
     /* 1. The Mask */
     .content {
         flex: 1; /* Fill remaining space between buttons */
         overflow: hidden; /* Hide elements that are too far off-screen */
         position: relative;
+        padding: 15px;
         /* Optional: Add a mask fade effect on sides */
         /* mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent); */
     }
@@ -131,6 +152,7 @@
     .track > :global(*) {
         flex-shrink: 0; /* CRITICAL: Prevent items from squishing */
         /* Note: We do NOT set width here, effectively keeping your original width */
+        cursor: pointer;
     }
 
     

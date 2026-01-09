@@ -3,11 +3,11 @@
 </script>
 
 <div class="projectButton">
-    <div class="gradient"></div>
     <div class="title">
         {title}
     </div>
     <img {src} alt="{title} project thumbnail" class="background" />
+    <div class="gradient"></div>
 </div>
 
 <style>
@@ -18,12 +18,12 @@
         scroll-snap-align: center; /* This makes the card "lock" into place */
         justify-content: center;
         align-items: center;
-        width: 500px;
-        height: 300px;      /* Or whatever height you want */
+        width: 400px;
+        height: 250px;      /* Or whatever height you want */
         overflow: hidden;   /* Keeps the image inside the borders */
-        border-radius: 50px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        border-radius: 40px;
         transition: all 0.3s ease-out;
+        border: 10px solid black;
     }
     
     .background {
@@ -40,7 +40,7 @@
         inset: 0;           /* This fills the parent completely */
         background: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.32) 63%, rgba(0, 0, 0, 0) 100%);
         z-index: 2;         /* Sits on top of the image */
-        opacity: 1;
+        opacity: 0.9;
         transition: all 0.3s ease-out;
     }
 
@@ -61,10 +61,9 @@
         margin-top: 150px;
     }
     .projectButton:hover .gradient {
-        opacity: 0.6;
+        opacity: 0.8;
     }
     .projectButton:hover{
         transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     }
 </style>
