@@ -28,6 +28,7 @@
 </script>
 
 <div class="paginator-frame">
+    
     <button class="nav-btn left" onclick={prevPage} disabled={currentPage === 0}>
         &larr;
     </button>

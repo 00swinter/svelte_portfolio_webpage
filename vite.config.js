@@ -7,5 +7,10 @@ export default defineConfig({
   base: '/portfolio/',
   build: {
     outDir: 'docs', // Changes output from 'dist' to 'docs'
-  }
+  },
+  server: {
+    watch: {
+      usePolling: true,
+    }
+  },
 })

@@ -1,5 +1,5 @@
 <script>
-    let { src, alt, title } = $props();
+    let { src, title } = $props();
 </script>
 
 <div class="projectButton">
@@ -7,7 +7,7 @@
     <div class="title">
         {title}
     </div>
-    <img {src} {alt} class="background" />
+    <img {src} alt="{title} project thumbnail" class="background" />
 </div>
 
 <style>
